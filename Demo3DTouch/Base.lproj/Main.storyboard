@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SdG-AU-bnx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo3DTouch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q50-Zf-w0z"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ag5-8V-UTg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LYf-mW-mpC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="155" id="rV9-vy-fLi" customClass="CustomCell" customModule="Demo3DTouch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="155"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rV9-vy-fLi" id="Ofd-iX-clO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="154.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf6-LC-O9d">
+                                                    <rect key="frame" x="15" y="11" width="164" height="133"/>
+                                                    <string key="text">Age of Empires II is the sequel to the award-winning, best-selling real-time strategy game Age of Empires. Explore new maps, multiplayer scenarios, spectator mode, and more.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="age_de_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4f5-ls-Su0">
+                                                    <rect key="frame" x="196" y="13" width="164" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="4f5-ls-Su0" secondAttribute="height" multiplier="41:32" id="nF3-6u-WgN"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4f5-ls-Su0" firstAttribute="top" secondItem="Ofd-iX-clO" secondAttribute="top" constant="13" id="ADd-mX-eo2"/>
+                                                <constraint firstItem="Vf6-LC-O9d" firstAttribute="leading" secondItem="Ofd-iX-clO" secondAttribute="leading" constant="15" id="Lvz-NW-GGO"/>
+                                                <constraint firstItem="4f5-ls-Su0" firstAttribute="leading" secondItem="Vf6-LC-O9d" secondAttribute="trailing" constant="17" id="Min-2K-AQo"/>
+                                                <constraint firstItem="Vf6-LC-O9d" firstAttribute="top" secondItem="Ofd-iX-clO" secondAttribute="top" constant="11" id="NsU-KB-6SE"/>
+                                                <constraint firstAttribute="trailing" secondItem="4f5-ls-Su0" secondAttribute="trailing" constant="15" id="TqE-oL-T1V"/>
+                                                <constraint firstAttribute="bottom" secondItem="4f5-ls-Su0" secondAttribute="bottom" constant="13.5" id="YU7-Pw-YJP"/>
+                                                <constraint firstItem="Vf6-LC-O9d" firstAttribute="width" secondItem="4f5-ls-Su0" secondAttribute="width" id="lwY-Md-Fqv"/>
+                                                <constraint firstAttribute="bottom" secondItem="Vf6-LC-O9d" secondAttribute="bottom" constant="10.5" id="zdm-gN-xp6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="Vf6-LC-O9d" id="y7O-oL-UMS"/>
+                                            <outlet property="logoImageView" destination="4f5-ls-Su0" id="Ugp-j6-hsq"/>
+                                            <segue destination="1Dy-RN-52O" kind="show" identifier="imgSegue" id="Geb-zS-zQG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LYf-mW-mpC" firstAttribute="top" secondItem="q50-Zf-w0z" secondAttribute="bottom" id="IMV-Ky-2XR"/>
+                            <constraint firstItem="Ag5-8V-UTg" firstAttribute="top" secondItem="LYf-mW-mpC" secondAttribute="bottom" id="P2g-o0-Dc4"/>
+                            <constraint firstAttribute="trailing" secondItem="LYf-mW-mpC" secondAttribute="trailing" id="aP4-FO-nom"/>
+                            <constraint firstItem="LYf-mW-mpC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="epV-tg-raD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vwd-nI-OUO"/>
+                    <connections>
+                        <outlet property="tableView" destination="LYf-mW-mpC" id="LsL-4s-E1s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="743.20000000000005" y="776.76161919040487"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="ABA-cd-qT3">
+            <objects>
+                <viewController storyboardIdentifier="previewVC" id="1Dy-RN-52O" customClass="PreviewViewController" customModule="Demo3DTouch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dL5-bW-GXR"/>
+                        <viewControllerLayoutGuide type="bottom" id="MH6-xf-UUa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cTZ-Cw-bCM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zO7-ex-cbc">
+                                <rect key="frame" x="16" y="194" width="343" height="279"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="279" id="5Vu-6r-u6I"/>
+                                    <constraint firstAttribute="width" secondItem="zO7-ex-cbc" secondAttribute="height" multiplier="343:279" id="fjo-Kr-NtB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zO7-ex-cbc" firstAttribute="centerX" secondItem="cTZ-Cw-bCM" secondAttribute="centerX" id="Uy5-vu-BDk"/>
+                            <constraint firstItem="zO7-ex-cbc" firstAttribute="centerY" secondItem="cTZ-Cw-bCM" secondAttribute="centerY" id="WTY-5B-oz9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="zO7-ex-cbc" id="IDl-SH-MxN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CpW-uG-rUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528.8" y="776.76161919040487"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LxO-RS-S6X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SdG-AU-bnx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bvq-kZ-VzL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SWd-EY-veO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N8x-QH-YdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="776.76161919040487"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="age_de_logo" width="614" height="455"/>
+    </resources>
+</document>
